@@ -1,11 +1,9 @@
 # site.yml
 ---
-- hosts: srv001
+- hosts: lampstack
   sudo: true
   roles:
-    - common
-
-- hosts: srv002
-  sudo: true
-  roles:
-    - common
+    - bertvv.el7
+    - bertvv.httpd
+    - bertvv.mariadb
+    - sepolicy
