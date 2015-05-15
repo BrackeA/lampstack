@@ -1,6 +1,9 @@
 # host_vars/lampstack.yml
 ---
 
+el7_repositories:
+  - epel-release
+
 el7_install_packages:
   - bash-completion
   - policycoreutils
@@ -22,4 +25,8 @@ mariadb_users:
     password: BulpashCod
     priv: 'wordpress.*:ALL'
 
+mariadb_root_password: Teilvadci
 
+wordpress_database: wordpress
+wordpress_user: wordpressusr
+wordpress_password: BulpashCod
