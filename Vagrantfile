@@ -4,6 +4,9 @@
 require 'rbconfig'
 require 'yaml'
 
+BOX_NAME = 'centos71-nocm'
+BOX_URL = 'https://tinfbo2.hogent.be/pub/vm/centos71-nocm-1.0.16.box'
+
 VAGRANTFILE_API_VERSION = '2'
 
 hosts = YAML.load_file('vagrant_hosts.yml')
@@ -74,7 +77,9 @@ end
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
-  config.vm.box = 'centos70-nocm'
+  config.vm.box = BOX_NAME
+  config.vm.box_url = BOX_URL
+
   config.ssh.insert_key = false # Keep using the insecure key
 
   hosts.each do |host|
