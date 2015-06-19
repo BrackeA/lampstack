@@ -28,7 +28,7 @@ manual_install() {
 
 
   for role in $roles; do
-    git clone "${base_url}${role}.git" "${role_dir}/bertvv.${role}"
+    git clone --config core.autocrlf=false "${base_url}${role}.git" "${role_dir}/bertvv.${role}"
   done
 }
 

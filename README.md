@@ -18,11 +18,13 @@ In order to set up this environment, you need:
 Open a Bash shell (Git Bash on Windows), go to a suitable directory to store this project and issue the following commands:
 
 ```ShellSession
-$ git clone https://github.com/bertvv/lampstack
+$ git clone --config core.autocrlf=false https://github.com/bertvv/lampstack
 $ cd lampstack
 $ ./scripts/dependencies.sh
 $ vagrant up
 ```
+
+**Warning** On Windows, make sure that the Git setting `core.autocrlf` is `false` before cloning.
 
 The VM will be attached to VirtualBox's [default Host-only network adapter](https://askubuntu.com/questions/198452/no-host-only-adapter-selected) and has a static IP address, 192.168.56.77.
 
