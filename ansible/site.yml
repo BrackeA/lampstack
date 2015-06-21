@@ -9,3 +9,9 @@
     - bertvv.mariadb
     - bertvv.wordpress
     - phpmyadmin
+
+- hosts: webserver
+  sudo: true
+  roles:
+    - bertvv.el7
+    - bertvv.httpd
