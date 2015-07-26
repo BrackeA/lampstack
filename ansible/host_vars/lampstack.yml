@@ -10,6 +10,7 @@ el7_install_packages:
   - setroubleshoot-server
   - tree
   - vim-enhanced
+  - nano
 
 el7_firewall_allow_services:
   - http
